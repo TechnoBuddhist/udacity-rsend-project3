@@ -743,16 +743,6 @@
           <wrench>-0.085524 0.023838 0.669128 0 -0 0</wrench>
         </link>
       </model>
-      <model name='asphalt_plane'>
-        <pose frame=''>0.082168 -0.989597 0 0 -0 0</pose>
-        <scale>1 0.989826 1</scale>
-        <link name='link'>
-          <pose frame=''>0.082168 -0.989597 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
       <model name='building'>
         <pose frame=''>0.102054 -0.79848 0 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -1025,26 +1015,6 @@
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>-0.000188 0.00058 -0.000213 -0.000956 -0.002671 0.004456</acceleration>
           <wrench>-0.003756 0.011604 -0.004256 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='ground_plane'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='ground_plane_0'>
-        <pose frame=''>-0.042271 -4.04892 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>-0.042271 -4.04892 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='my_ball'>
@@ -3252,50 +3222,6 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose frame=''>2.53065 5.55706 0 0 -0 0</pose>
     </model>
-    <model name='asphalt_plane'>
-      <static>1</static>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry>
-            <box>
-              <size>20 23.5554 0.1</size>
-            </box>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <cast_shadows>0</cast_shadows>
-          <geometry>
-            <box>
-              <size>20 23.5554 0.1</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>model://asphalt_plane/materials/scripts</uri>
-              <uri>model://asphalt_plane/materials/textures</uri>
-              <name>vrc/asphalt</name>
-            </script>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <pose frame=''>0.045983 -0.824629 0 0 -0 0</pose>
-    </model>
     <model name='cabinet'>
       <static>1</static>
       <link name='cabinet_bottom_plate'>
@@ -3622,54 +3548,6 @@
         <kinematic>0</kinematic>
       </link>
       <pose frame=''>8.26843 6.11172 0 0 -0 0</pose>
-    </model>
-    <model name='ground_plane_0'>
-      <static>1</static>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry>
-            <plane>
-              <normal>0 0 1</normal>
-              <size>100 100</size>
-            </plane>
-          </geometry>
-          <surface>
-            <friction>
-              <ode>
-                <mu>100</mu>
-                <mu2>50</mu2>
-              </ode>
-              <torsional>
-                <ode/>
-              </torsional>
-            </friction>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-          </surface>
-          <max_contacts>10</max_contacts>
-        </collision>
-        <visual name='visual'>
-          <cast_shadows>0</cast_shadows>
-          <geometry>
-            <plane>
-              <normal>0 0 1</normal>
-              <size>100 100</size>
-            </plane>
-          </geometry>
-          <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
-            </script>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <pose frame=''>-0.042271 -4.04892 0 0 -0 0</pose>
     </model>
     <model name='person_standing'>
       <link name='link'>
@@ -16426,6 +16304,6 @@
       <pose frame=''>1.79992 0.20444 0.55 0 -0 0</pose>
     </model>
 
-    <plugin filename="libcollision_map_creator.so" name="collision_map_creator"/>
+    <plugin filename="libcollision_map_creator.so" name="collision_map_creator" />
   </world>
 </sdf>
