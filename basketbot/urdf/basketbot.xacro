@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
-<robot name="my_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <xacro:include filename="$(find my_robot)/urdf/my_robot.gazebo" />
+<robot name="basketbot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="$(find basketbot)/urdf/basketbot.gazebo" />
   
   <!--  VARIABLES -->
   
@@ -347,7 +347,7 @@
     <visual name="hokuyo_visual">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://my_robot/meshes/hokuyo.dae" />
+        <mesh filename="package://basketbot/meshes/hokuyo.dae" />
       </geometry>
     </visual>
 
