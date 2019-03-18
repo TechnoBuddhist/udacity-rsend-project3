@@ -1,4 +1,6 @@
 <launch>
+  <arg name="PI" value="3.14159" />
+
   <!-- Map Server -->
   <arg name="map_file" default="$(find basketbot)/maps/map.yaml" />
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
@@ -12,6 +14,24 @@
     <param name="global_frame_id" value="map" />
     <param name="initial_pose_x" value="0.0" />
     <param name="initial_pose_y" value="0.0" />
+
+    <param name="min_particles" value="100" />
+    <param name="max_particles" value="500" />
+    <param name="update_min_a" value="${arg PI/6.0}" />
+    <param name="update_min_d" value="0.2" />
+    <param name="resample_interval" value="2" />
+
+    <param name="laser_min_range" value="-1.0" />
+    <param name="laser_max_range" value="-1.0" />
+    <param name="laser_max_beams" value="30" />
+    <param name="laser_z_hit" value="0.95" />
+    <param name="laser_z_rand" value="0.05" />
+    <!--
+    <param name="" value="" />
+    <param name="" value="" />
+    <param name="" value="" />
+    <param name="" value="" />
+    -->
   </node>
   
   <node name="move_base" pkg="move_base" type="move_base" respawn="false" output="screen">
