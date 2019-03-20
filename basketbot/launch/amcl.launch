@@ -17,8 +17,8 @@
 
     <param name="min_particles" value="100" />
     <param name="max_particles" value="5000" />
-    <param name="update_min_a" value="${arg PI/6.0}" />
-    <param name="update_min_d" value="0.2" />
+    <param name="update_min_a" value="${arg PI/3.0}" />
+    <param name="update_min_d" value="0.1" />
     <param name="resample_interval" value="2" />
 
     <param name="laser_min_range" value="-1.0" />

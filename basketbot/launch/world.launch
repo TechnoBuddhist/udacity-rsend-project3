@@ -34,7 +34,7 @@
               -R $(arg roll) -P $(arg pitch) -Y $(arg yaw)"/>
 
   <!-- Launch Detector node to stop if objects get too close -->
-  <node name="detector" pkg="detector" type="detector" output="screen" />
+  <!--<node name="detector" pkg="detector" type="detector" output="screen" />-->
   
   <!-- Launch rviz -->
   <node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d $(find basketbot)/config/basketbot.rviz" />
