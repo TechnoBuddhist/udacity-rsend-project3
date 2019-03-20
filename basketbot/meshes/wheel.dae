@@ -5,8 +5,8 @@
       <author>Blender User</author>
       <authoring_tool>Blender 2.80.48 commit date:2019-03-13, commit time:00:20, hash:bf9904ec8018</authoring_tool>
     </contributor>
-    <created>2019-03-18T22:54:41</created>
-    <modified>2019-03-18T22:54:41</modified>
+    <created>2019-03-20T15:02:34</created>
+    <modified>2019-03-20T15:02:34</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -102,7 +102,7 @@
   <library_visual_scenes>
     <visual_scene id="Scene" name="Scene">
       <node id="Wheel" name="Wheel" type="NODE">
-        <matrix sid="transform">1.6271e-8 1.711543 0 0 -1.364458 2.04099e-8 0 0 0 0 1.711543 0 0 0 0 1</matrix>
+        <matrix sid="transform">1.6271e-8 1.711543 0 0 -1.364458 2.04099e-8 0 0 0 0 1.711543 0.075 0 0 0 1</matrix>
         <instance_geometry url="#Wheel_slick_001-mesh" name="Wheel">
           <bind_material>
             <technique_common>
