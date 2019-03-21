@@ -1,4 +1,4 @@
-# BasketBot
+# Project 3 - BasketBot
 My project for the Udacity Robotics Software Engineer Nanodegree 2019.
 
 ## Getting Started
@@ -29,9 +29,9 @@ You will need 2 terminals running.
 In your ROS workspace :-
 
 ```
-source devel/setup.bash
 catkin_make
-roslaunch my_robot world.launch
+source devel/setup.bash
+roslaunch basketbot world.launch
 ```
 
 **Terminal 2**
@@ -39,14 +39,11 @@ In your ROS workspace :-
 
 ```
 source devel/setup.bash
-roslaunch ball_chaser ball_chaser.launch
+roslaunch basketbot amcl.launch
 ```
 
-`ball_chaser.launch` can take 3 parameters, the RGB values of an object for the robot to chase. e.g.
-
-```
-roslaunch ball_chaser ball_chaser.launch red:=102 green:=0 blue:=0
-```
+## Future Work
+I have started to work on a detector node that should stop the robot when an object is close to it. The code is in this repo but remains non-working currently.
 
 ## Contributing
 No contributions accepted this is **my project** for the course.
