@@ -12,11 +12,11 @@ Detector::Detector() {
 }
 
 // Publish a Twist message to move robot
-void Detector::move() {
-  geometry_msgs::Twist msg;
-  msg.linear.x = FORWARD_SPEED;
-  pub.publish(msg);
-}
+// void Detector::move() {
+//   geometry_msgs::Twist msg;
+//   msg.linear.x = FORWARD_SPEED;
+//   pub.publish(msg);
+// }
 
 void Detector::detect(const sensor_msgs::LaserScan::ConstPtr& laserScan){
   // From the array of laser scans find the closest
